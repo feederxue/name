@@ -11,3 +11,86 @@
     @include direction;
     overflow: hidden;
 }
+
+section {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    @include box-flex;
+    @include direction;
+    overflow: hidden;
+    padding: 0 pxTorem(15px);
+    flex-shrink: 0;
+    @include sizing;
+    .top {
+        width: 100%;
+        height: pxTorem(40px);
+        @include box-flex;
+        flex-shrink: 0;
+        @include justify(space-between);
+        p {
+            font-size: pxTorem(18px);
+        }
+        span {
+            color: #898989;
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        flex-shrink: 0;
+        height: pxTorem(100px);
+    }
+    .bsrcoll {
+        height: 100%;
+        overflow: hidden;
+        div {
+            @include box-flex;
+            @include flexWrap;
+            flex-shrink: 0;
+            background: #eee;
+            >p {
+                width: 100%;
+                text-align: center;
+                height: pxTorem(30px);
+                line-height: pxTorem(30px);
+            }
+            dl {
+                width: 46%;
+                height: pxTorem(200px);
+                border: 1px solid #ccc;
+                @include box-flex;
+                @include direction;
+                margin: pxTorem(5px);
+                background: #fff;
+                dd {
+                    width: 99%;
+                    height: 67%;
+                    img {
+                        @include wh(100%, 100%);
+                    }
+                }
+                dt {
+                    p {
+                        margin: pxTorem(2px);
+                        color: #898989;
+                    }
+                    span {
+                        color: #898989;
+                        em {
+                            color: red;
+                        }
+                    }
+                    span:nth-child(3) {
+                        margin: pxTorem(5px) pxTorem(2px);
+                        float: right;
+                    }
+                    div:nth-child(4) {
+                        color: #898989;
+                        float: right;
+                        margin-left: pxTorem(90px);
+                    }
+                }
+            }
+        }
+    }
+}
