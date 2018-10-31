@@ -1,0 +1,13 @@
+@import"common.scss";
+@import"_minix.scss";
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.wrap {
+    @include wh(100%, 100%);
+    @include box-flex;
+    @include direction;
+    overflow: hidden;
+}
