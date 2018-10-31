@@ -11,3 +11,32 @@
     @include direction;
     overflow: hidden;
 }
+
+header {
+    @include wh(100%, pxTorem(80px));
+    @include box-flex;
+    overflow-x: auto;
+    @include direction;
+    flex-shrink: 0;
+    .active {
+        color: red;
+    }
+    p {
+        @include wh(100%, 50%);
+        text-align: center;
+        line-height: pxTorem(40px);
+    }
+    ul {
+        width: 100%;
+        height: 50%;
+        overflow-x: auto;
+        li {
+            width: 30%;
+            text-align: center;
+            height: 100%;
+            line-height: pxTorem(40px);
+            overflow-x: auto;
+            float: left;
+        }
+    }
+}
